@@ -30,7 +30,10 @@ function draw_particles(particles, ctx) {
                 ctx.fillStyle = "blue"
                 break
         }
-        ctx.fillRect(p.x, p.y, p.size, p.size)
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size / 2, 0, Math.PI * 2);
+        ctx.fill();
     }
 }
 
